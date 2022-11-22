@@ -7,7 +7,7 @@ function closeTheCookieBanner() {
   // check if the banner is visible
   // if yes, click the "Agree" button
   // else do nothing
-  cy.get('.banner').if('visible').find('button').click()
+  cy.get('.banner').if('visible').contains('button', 'Agree').click()
   // confirm the banner is not visible
   cy.get('.banner').should('not.be.visible')
 }
