@@ -2,6 +2,8 @@
 
 > Control the cookie consent banner from Cypress tests
 
+Example application for [cypress-if](https://github.com/bahmutov/cypress-if) plugin and the [Cypress Plugins Course 🎓](https://cypress.tips/courses/cypress-plugins).
+
 ## Small print
 
 Author: Gleb Bahmutov &lt;gleb.bahmutov@gmail.com&gt; &copy; 2022
