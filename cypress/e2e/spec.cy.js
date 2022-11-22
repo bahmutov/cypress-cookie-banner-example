@@ -20,3 +20,12 @@ it('prevents the cookie banner from showing up', () => {
   cy.visit('index.html')
   cy.get('aside.banner').should('not.be.visible')
 })
+
+it('once closed it stays hidden', () => {
+  cy.visit('index.html')
+  cy.get('aside.banner').should('be.visible')
+  cy.contains('button', 'Agree').click()
+  cy.get('aside.banner').should('not.be.visible')
+  cy.reload()
+  cy.get('aside.banner').should('not.be.visible')
+})
