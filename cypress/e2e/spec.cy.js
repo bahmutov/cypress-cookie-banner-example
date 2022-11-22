@@ -1,12 +1,15 @@
 // enables intelligent code completion for Cypress commands
 // https://on.cypress.io/intelligent-code-completion
 /// <reference types="cypress" />
+import 'cypress-if'
 
 function closeTheCookieBanner() {
   // check if the banner is visible
   // if yes, click the "Agree" button
   // else do nothing
+  cy.get('.banner').if('visible').find('button').click()
   // confirm the banner is not visible
+  cy.get('.banner').should('not.be.visible')
 }
 
 it('closes the cookie banner', () => {
