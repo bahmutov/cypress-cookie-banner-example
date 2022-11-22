@@ -14,3 +14,9 @@ it('closes the cookie banner', () => {
     value: 'given',
   })
 })
+
+it('prevents the cookie banner from showing up', () => {
+  cy.setCookie('cookieConsent', 'given')
+  cy.visit('index.html')
+  cy.get('aside.banner').should('not.be.visible')
+})

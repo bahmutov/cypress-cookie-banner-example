@@ -109,7 +109,7 @@
       assumenda voluptatem?
     </p>
   </main>
-  <aside class="banner">
+  <aside class="banner" style="display: none">
     This is a cookie consent banner because this website uses cookies.
     <button id="agree">Agree</button>
   </aside>
@@ -118,5 +118,9 @@
       document.cookie = 'cookieConsent=given'
       document.querySelector('aside.banner').style.display = 'none'
     })
+    if (!document.cookie.includes('cookieConsent=given')) {
+      // show the cookie banner
+      document.querySelector('aside.banner').style.display = 'inherit'
+    }
   </script>
 </body>
