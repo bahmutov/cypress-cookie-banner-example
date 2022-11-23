@@ -1,4 +1,4 @@
-# cypress-cookie-banner-example ![cypress version](https://img.shields.io/badge/cypress-11.1.0-brightgreen)
+# cypress-cookie-banner-example ![cypress version](https://img.shields.io/badge/cypress-11.0.1-brightgreen)
 
 > Control the cookie consent banner from Cypress tests
 
