@@ -118,7 +118,7 @@
       document.cookie = 'cookieConsent=given'
       document.querySelector('aside.banner').style.display = 'none'
     })
-    if (!document.cookie.includes('cookieConsent=given')) {
+    if (Math.random() < 0.5) {
       // show the cookie banner
       document.querySelector('aside.banner').style.display = 'inherit'
     }
